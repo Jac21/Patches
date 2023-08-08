@@ -1,0 +1,778 @@
+<!DOCTYPE html><html lang="en"><head>
+<meta charset="UTF-8">
+<title>Digitakt OS 1.40 Release Notes</title>
+<meta name="author" content="Elektron Music Machines MAV AB">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style>body { max-width: 6.27in; margin: auto; font-family: Sans-Serif; } </style>
+<link rel="stylesheet" type="text/css" href="https://static.elektron.se/css/release-notes.css">
+</head><body>
+<h1 id="digitakt-os-140-release-notes">Digitakt OS 1.40 Release Notes</h1>
+
+<p>Elektron Music Machines</p>
+
+<p>September 28, 2022</p>
+
+<h2 id="how-to-upgrade">How to upgrade:</h2>
+
+<p>To send the OS syx file, use our free Elektron Transfer software. Transfer can be downloaded from the Elektron website. </p>
+
+<h3 id="upgrading-from-within-the-os">Upgrading from within the OS</h3>
+
+<ul>
+<li><p>Connect the Elektron device to the computer via USB and switch it on.</p></li>
+<li><p>Open the Transfer application on your computer.</p></li>
+<li><p>On the Transfer CONNECTION page, set the MIDI IN and MIDI OUT ports to your Elektron device.</p></li>
+<li><p>On the Transfer DROP page, drag and drop the OS file. The OS file is then automatically transferred to the Elektron device and the OS update initiates. A progress bar is visible on device screen when receiving the OS.</p></li>
+<li><p>On your device. Press <strong>[YES]</strong> to confirm the OS update.</p></li>
+</ul>
+
+<p>If your current device OS does not fully support Transfer, you will be automatically directed to Transfer's LEGACY OS UPGRADE page after you drag and drop the OS file on the Transfer DROP page. Follow the instructions on the LEGACY OS UPGRADE page to proceed with the OS upgrade.</p>
+
+<p>When the update is done the unit will restart by itself.</p>
+
+<h3 id="upgrading-from-the-startup-menu">Upgrading from the STARTUP menu</h3>
+
+<ul>
+<li><p>Connect the Elektron device to the computer via the device's MIDI port. (You cannot use the USB port).</p></li>
+<li><p>Hold down the <strong>[FUNC]</strong> button while powering on the Elektron device. This takes you to
+the STARTUP menu.</p></li>
+<li><p>Press the <strong>[TRIG 4]</strong> key to enter OS UPGRADE mode.</p></li>
+<li><p>Open the Transfer application on your computer.</p></li>
+<li><p>On the Transfer CONNECTION page, click "LEGACY OS UPGRADE mode"</p></li>
+<li><p>On the Transfer LEGACY OS UPGRADE mode page browse to, and select, the downloaded OS syx file.</p></li>
+<li><p>Select your MIDI interface.</p></li>
+<li><p>In Transfer, press "UPGRADE".</p></li>
+</ul>
+
+<p>A progress bar is visible on device screen when receiving the OS.</p>
+
+<p>When the update is done the unit will restart by itself.</p>
+
+<p>After some upgrades the bootstrap is also upgraded.
+This upgrade is performed right after the first restart of the device.
+<strong>Do not turn the power off during the upgrade</strong>.</p>
+
+<p>Downgrading the device OS is not supported, and is performed at your own
+risk. User content may be lost.</p>
+
+<p>Should you experience any problems or find any bugs, please report this to</p>
+
+<p>Elektron support: <a href="http://www.elektron.se/support">http://www.elektron.se/support</a></p>
+
+<p>Enjoy!</p>
+
+<p><em>The Elektron development team</em></p>
+
+<hr />
+
+<h2 id="list-of-changes-from-os-130b-to-140">List of changes from OS 1.30B to 1.40</h2>
+
+<h3 id="improvements">Improvements</h3>
+
+<p>Implemented Song mode. The <strong>[&middot;&middot;&middot;]</strong> key has been re-purposed and is now the <strong>[SONG MODE]</strong> key. The PATTERN menu has been moved to the SETTINGS menu. </p>
+
+<p>Updated the CHROMATIC mode with additional functionality, i.e., keyboard fold and scales. </p>
+
+<p>Renamed options in the SOUND OPERATIONS menu in the SOUND MANAGER. <br />
+Import to TRK &gt; Load to TRK <br />
+Export to here &gt; Save to here</p>
+
+<h3 id="bug-fixes">Bug fixes</h3>
+
+<p>The LFO waveform could sometimes be drawn with corrupt screen graphics.</p>
+
+<h2 id="list-of-changes-from-os-130-to-130b">List of changes from OS 1.30 to 1.30B</h2>
+
+<p>Audio could in some cases clip when using Parametric EQ with negative gain.</p>
+
+<p>Audio and sync could in some cases drop out when the device was used together with Overbridge.</p>
+
+<p>The delay could not be unrouted from Main in the AUDIO ROUTING menu without also unrouting the reverb.</p>
+
+<p>A parameter locked LFO destination was not always set correctly after loading a project that was last saved in an earlier OS.</p>
+
+<h2 id="list-of-changes-from-os-121a-to-130">List of changes from OS 1.21A to 1.30</h2>
+
+<h3 id="improvements-2">Improvements</h3>
+
+<p>Added external audio input functionality and a new EXTERNAL MIXER IN parameter page. The audio from INPUT L and R has also been added as sidechain sources for the compressor. Press <strong>[FUNC]</strong> + <strong>[LFO]</strong> (three times) to access the EXTERNAL MIXER IN page.</p>
+
+<p>Added a base/width filter. The new filter is located on Filter Page 2.</p>
+
+<p>Added parametric EQ as a new filter type.</p>
+
+<p>Added a filter envelope delay parameter.</p>
+
+<p>Added a second LFO. The second LFO is located on LFO Page 2.</p>
+
+<p>Added the individual internal audio tracks as sample sources.</p>
+
+<p>Extended the <strong>TUNE</strong> (sample pitch) parameter downward range to -60 semitones. The <strong>NOTE</strong> range is also changed to accommodate for the extended <strong>TUNE</strong> range. The added range also necessitated a change in which incoming MIDI notes triggering what note on the device. Middle C is now triggered on note 60 instead of note 36.</p>
+
+<p>Added multi-track recording functionality in STEP RECORDING mode.</p>
+
+<p>Added a GLOBAL FX/MIX menu item in the SETTINGS menu. In the GLOBAL FX/MIX menu, you have the option to set the parameters on the DELAY, REVERB, COMPRESSOR, INTERNAL MIXER, and EXTERNAL MIXER parameter pages to be global (making any change to these parameters affect all patterns in the project and not only the active pattern).</p>
+
+<p>Implemented an intensity setting for the LEDs and OLED screen. The option is located in the SYSTEM menu.</p>
+
+<p>Added an option for the device to remember which of a PARAMETER page's subpage you last used and access this page again next time you press the same <strong>[PARAMETER]</strong> key.</p>
+
+<p>Updated the LFO UI and improved graphics for the <strong>WAVE</strong> and <strong>PHAS</strong> parameters.</p>
+
+<p>The LFO Fade envelope now resets also in FREE mode when <strong>LFO.T</strong> is set to ON.</p>
+
+<p>Improved UI graphics for bipolar parameters.</p>
+
+<p><strong>FILTER MODE</strong> set to OFF is now illustrated with a dotted line in the UI.</p>
+
+<p>Improved the transition when changing between two filter types.</p>
+
+<p>Incoming MIDI CC data for the FX parameters is now only received on the set FX CONTROL MIDI channel and not on the AUTO MIDI channel.</p>
+
+<h3 id="bug-fixes-2">Bug fixes</h3>
+
+<p>Parameter values could wrap around when quickly turning a pushed down encoder.</p>
+
+<p>Shifting between FX/Master pages and parameter pages had inconsistent behavior.</p>
+
+<h2 id="list-of-changes-from-os-121-to-121a">List of changes from OS 1.21 to 1.21A</h2>
+
+<p>Samples could sometimes become corrupted when transferring them to the Elektron device from an M1 Mac using Transfer.</p>
+
+<h2 id="list-of-changes-from-os-120a-to-121">List of changes from OS 1.20A to 1.21</h2>
+
+<h3 id="improvements-3">Improvements</h3>
+
+<p>Added Overbridge support for macOS Big Sur.</p>
+
+<h3 id="bug-fixes-3">Bug fixes</h3>
+
+<p>The first trig in the pattern was sometimes not triggered when controlling the Elektron device with an external MIDI clock, and MIDI transport was started.</p>
+
+<p>Only the start of the chain was visible on screen when creating a new pattern chain.</p>
+
+<p>Some special characters were not shown when used in a pattern name.</p>
+
+<p>SysEx dumps could become corrupted when sent to certain computer software.</p>
+
+<h2 id="list-of-changes-from-os-120-to-120a">List of changes from OS 1.20 to 1.20A</h2>
+
+<h3 id="bug-fixes-4">Bug fixes</h3>
+
+<p>The USB Class Compliant audio from the computer to the Elektron device could sometimes be silenced.</p>
+
+<p>In LIVE RECORDING MODE, adding long sustained notes on top of previously entered trigs did not work correctly.</p>
+
+<p>High-resolution parameters changed too rapidly when the encoder was pressed and turned.</p>
+
+<p>The sequencer retrig parameters were responding too fast, making it hard to dial in a specific parameter value.</p>
+
+<p>Samples belonging to Sound Pool Sounds were not marked as used when selecting unused samples.</p>
+
+<p>Trig length was not recorded when using an external MIDI controller sending data on the track channels in LIVE RECORDING mode.</p>
+
+<p>Trig conditions did not work as expected when using pattern chains.</p>
+
+<p>The active pattern page was reset to 1:4 when changing tracks in GRID RECORDING mode.</p>
+
+<h2 id="list-of-changes-from-os-111-to-120">List of changes from OS 1.11 to 1.20</h2>
+
+<h3 id="improvements-4">Improvements</h3>
+
+<p>The Digitakt now supports class compliant audio over USB.</p>
+
+<p>Added a new step recording mode for the sequencer. Press <strong>[RECORD]</strong> + <strong>[STOP]</strong> to enter STEP RECORDING mode.</p>
+
+<p>Added the possibility to select and/or purge unused Sounds and samples from a project.</p>
+
+<p>Added the functionality to preview a single step (including its parameter locks) on the sequencer for both audio and MIDI tracks by pressing <strong>[TRIG]</strong> + <strong>[YES]</strong>.</p>
+
+<p>Added a new TRIG PROBABILITY parameter.</p>
+
+<p>Added a new trig condition (100%) to the X% range.</p>
+
+<p>Randomizing the SRC parameter page now also affects the <strong>SMP</strong> (sample slot) parameter.</p>
+
+<p>Separated TRANSPORT from CLOCK send and receive settings in the SYNC menu.</p>
+
+<p>Added snap values for the LEN parameter on the TRIG page.</p>
+
+<p>Added snap values for the LENGTH parameter when pressing <strong>[FUNC]</strong> + <strong>[UP]</strong>/<strong>[DOWN]</strong> in the SCALE menu. </p>
+
+<p>The active sequencer step is now indicated in CHROMATIC mode.</p>
+
+<p>Prevented MIDI feedback problems that could occur when pressing <strong>[STOP]</strong> twice.</p>
+
+<p>Added support for OS upgrades using Elektron Transfers Drop page.</p>
+
+<p>Moved the Audio Routing options for USB Audio to the SETTINGS &gt; AUDIO ROUTING menu.</p>
+
+<p>Changed the default tempo mode to PATTERN TEMPO mode.</p>
+
+<p>Improved the visual feedback from the <strong>[REC]</strong> key in LIVE RECORDING mode.</p>
+
+<p>The user is now prompted to select SysEx transfer interface when sending project backups and USB+MIDI is selected.</p>
+
+<p>Changed the MIDI port name to read "Elektron Digitakt" over USB.</p>
+
+<h3 id="bug-fixes-5">Bug fixes</h3>
+
+<p>Chords were not trigged when trigged manually on MIDI tracks.</p>
+
+<p>Certain combinations of SCALE settings on the MIDI tracks could sometimes lead to that the first step of a pattern being played once more when changing patterns.</p>
+
+<p>Trig Conditions did not function correctly under some circumstances when using SCALE PER TRACK.</p>
+
+<p>Simultaneously pressing four or more trig keys could in some cases lead to double-triggered keys.</p>
+
+<p>Locked Sounds could display the wrong sample waveform on the SAMPLE WAVEFORM page.</p>
+
+<p>Randomizing a page incorrectly quantized high-res parameters.</p>
+
+<p>The sequencer started after preroll, even if it was paused before the end of the preroll.</p>
+
+<p>The dotted values for the delays <strong>TIME</strong> parameter were displayed incorrectly.</p>
+
+<p>Character selection using the <strong><em>LEVEL/DATA</em></strong> knob in the pop-up naming window did not behave correctly.</p>
+
+<p>The <strong>STORAGE</strong> screen could incorrectly display a negative usage percentage.</p>
+
+<p>Pressing and holding <strong>FUNC</strong>, and then turning the knob for the <strong>DELAY TIME</strong> parameter now snaps to a set of fixed values instead of an offset to the previous value.</p>
+
+<p>The sequencer could be out of sync when using scale per track, if the previously set scale per pattern value was not 1x. </p>
+
+<p>The reload function of the FX parameter pages did not work correctly, even though the <em>RELOAD PAGE</em> message appeared.</p>
+
+<p>The revert CONTROL ALL function only reverted the active page.</p>
+
+<p>Pressing <strong>[FUNC]</strong> + <strong>[UP]</strong>/<strong>[DOWN]</strong> to set the TRACK LENGTH in increments of 16 in the SCALE Menu did not work.</p>
+
+<p>Trigs with PRE and NOT PRE conditions did not trigger correctly the first time a pattern played.</p>
+
+<p>In some cases, it was possible to place trigs outside the range of the current track.</p>
+
+<p>When changing between patterns that had different AUDIO ROUTING settings, the new pattern inherited the routing of the previous pattern instead of loading its own settings.</p>
+
+<p>It was not possible to clear TRACK LEVEL, MIX LEVEL, or PATTERN VOLUME by pressing <strong><em>ENCODER</strong></em> + <strong>[NO]</strong>.</p>
+
+<p>It was not possible to randomize or reload FX pages on MIDI tracks.</p>
+
+<p>A fixed (non-synced) BPM MULT setting on one LFO could, in some circumstances, affect the tempo of LFOs on other tracks.</p>
+
+<p>All settings and empty patterns in the factory project were not cleared when performing a factory reset.</p>
+
+<p>When receiving external MIDI notes in LIVE RECORDING mode, only the first played note's velocity in a chord was recorded. The following notes instead got the default velocity parameter value.</p>
+
+<p>Parameter locking LFO values for MIDI tracks had no effect.</p>
+
+<p>The device did not listen to the MIDI CC All Notes Off.</p>
+
+<h2 id="list-of-changes-from-os-110-to-111">List of changes from OS 1.10 to 1.11</h2>
+
+<h3 id="improvements-5">Improvements</h3>
+
+<p>Added support for Overbridge plugin.</p>
+
+<p>Added scale per track functionality to the sequencer.</p>
+
+<p>Added functionality to randomize page parameters. <strong>[PARAMETER]</strong> + <strong>[YES]</strong> 
+to randomize. <strong>[PARAMETER]</strong> + <strong>[NO]</strong> to reset PARAMETER page to its last 
+saved state.</p>
+
+<p>Delay Time parameter values are now displayed as note values on relevant steps.</p>
+
+<p>Added the possibility to revert changes made by using the Control all functionality.</p>
+
+<p>Implemented reload track Sound functionality. (<strong>[TRK]</strong> + <strong>[TRIG 1-8]</strong> + <strong>[NO]</strong>)
+Several track Sounds can be reloaded at the same time by pressing multiple 
+<strong>[TRIG]</strong> keys.</p>
+
+<p>Added the option to select if audio over USB is Post or Pre track level.</p>
+
+<p>The screen saver now turns off the screen after 60 minutes of inactivity.</p>
+
+<p>Added option to mute internal output from main (<strong>USB CONFIG</strong> menu).</p>
+
+<p>Added USB to main volume setting (<strong>USB CONFIG</strong> menu).</p>
+
+<p>Added support for pattern mutes over CC/NRPN.</p>
+
+<h3 id="bug-fixes-6">Bug fixes</h3>
+
+<p>It was not possible to use the MANAGE SOUNDS menu to copy Sounds to the Sound Pool.</p>
+
+<p>The sequencer started after preroll, even if it was stopped before the end of 
+the preroll.</p>
+
+<p>Controlling the VAL1 parameter on MIDI tracks, using an external controller did 
+not work.</p>
+
+<p>The MUTE mode could under some circumstances be deactivated when pressing 
+<strong>[BANK]</strong> or <strong>[PTN]</strong>.</p>
+
+<p>Control All function did not work on the <strong>TRACK LEVEL</strong> parameter.</p>
+
+<p>Changing PARAMETER page did not always close the open menu.</p>
+
+<p>Pressing <strong>[YES]</strong> when browsing an empty Sound Pool returned an error.</p>
+
+<p>CC values were sent even if the value was disabled (<strong>[FUNC]</strong> + <strong><em>DATA ENTRY</em></strong> 
+knob) if an LFO was assigned to the CC value.</p>
+
+<p>The Bank selection was still active after timeout if a <strong>[TRIG 1-8]</strong> key was 
+pressed during the timeout process.</p>
+
+<p>MIDI Bank Select sent from the MIDI tracks output the message in the wrong format. 
+An additional SBNK parameter is now added to the SRC page on the MIDI tracks.</p>
+
+<p>Sometimes, in MUTE mode a high amount of trigs playing in the sequencer caused 
+the colors to get stuck.</p>
+
+<p><strong>[NO]</strong> + <strong>[TRIG 9-16]</strong> keys did not clear trigs on MIDI tracks in LIVE RECORDING 
+mode.</p>
+
+<p>The <strong>[FUNC]</strong> key's state remained as "pressed" if <strong>[FUNC]</strong> + key opened a dialog box 
+window, even after the dialog box was closed.</p>
+
+<h2 id="list-of-changes-from-os-108-to-110">List of changes from OS 1.08 to 1.10</h2>
+
+<h3 id="improvements-6">Improvements</h3>
+
+<p>Overbridge support added.</p>
+
+<p>Increased the number of LFO speed snap values.</p>
+
+<p>Adjusted size of icons in the <em>Settings</em> menu.</p>
+
+<p>It is now possible to perform copy, paste and clear operations on the MIDI 
+parameter pages.</p>
+
+<h3 id="bug-fixes-7">Bug fixes</h3>
+
+<p>Parameter locking a trig and pressing the <em>BANK</em> key at the same time caused 
+unwanted behaviors and errors.</p>
+
+<p>On a parameter locked step, MIDI CC both sent the default value and the locked 
+value.</p>
+
+<p>While playing a sound, there was an audible click when amp pan was set to full 
+left or right if the track level and amp volume were both set to max.</p>
+
+<p>Sample waveforms from the previous project were not cleared when loading a new
+project where the corresponding sample slots were empty.</p>
+
+<p>Digitakt could not connect to Transfer when auto channel was set to 1.</p>
+
+<p>The compressor's dry/wet level (MIX parameter) did not react to its assigned CC
+due to a conflict with the LFO depth CC LSB parameter. The LFO depth CC LSB
+parameter is now changed to 110.</p>
+
+<p>Controlling the MIDI tracks VAL parameters with external CCs did not work.</p>
+
+<p>The wrong parameter was sent externally from LFO MULT when changing the 
+parameter on the device.</p>
+
+<p>The sequencer switched to the new pattern when the user aborted the pattern 
+paste/clear operation.</p>
+
+<p>Samples loaded to RAM could not be previewed in <em>Sample Manager</em>.</p>
+
+<h2 id="list-of-changes-from-os-107-to-108">List of changes from OS 1.07 to 1.08</h2>
+
+<h3 id="improvements-7">Improvements</h3>
+
+<p>Master compressor added.</p>
+
+<p>The name of the sample loaded to a track is displayed when you press and hold 
+<em>SRC</em> or if you are in GRID RECORDING mode and press a trig with a sample lock.</p>
+
+<p>Screensaver mode is implemented. If there is no interaction with the Digitakt 
+for some time, then the screen intensity is automatically lowered.</p>
+
+<p>When you add a retrig, the first up/down-arrow press now only engages the 
+retrig on/off (and does not change RATE) on the first press.</p>
+
+<h3 id="bug-fixes-8">Bug fixes</h3>
+
+<p>When you load a Sound to the Sound Pool, its associated sample was not loaded 
+to the RAM, if the original sample slot was not empty in the active project.</p>
+
+<p>The last entry in the sample list was empty when viewing RAM in the Sample 
+Manager. </p>
+
+<p>Parameter locks on lock trigs are applied additively, but only the parameter 
+locks from the latest lock trig were reset by the following note trig.</p>
+
+<p>BPM was sometimes displayed with two decimals instead of one.</p>
+
+<p>Press-and-hold encoder turn sometimes resulted in reverse-turn on release.</p>
+
+<p>After a pattern had played one loop, it was no longer possible to undo the 
+track clear command.</p>
+
+<p>Parameter locks copied (and then pasted) with the Copy Track/Page command were 
+not restored after the pattern was reloaded.</p>
+
+<p>CH.LEN in Length per track scale mode should not have applied to Length per 
+pattern scale mode.</p>
+
+<h2 id="list-of-changes-from-os-106-to-107">List of changes from OS 1.06 to 1.07</h2>
+
+<h3 id="improvements-8">Improvements</h3>
+
+<p>Added 'insert char' functionality to name editor using <em>FUNC</em> + <em>YES</em>.</p>
+
+<p>Show sequencer in paused state with lit <em>PLAY</em> and <em>STOP</em> keys.</p>
+
+<p>Sample Manager now displays the current folder.</p>
+
+<p>When a pattern is saved for the fist time, the pattern rename dialogue now 
+opens.</p>
+
+<p><em>PAGE</em> button LED is now lit when in scale setup.</p>
+
+<p>Show tag selector when exporting a sound.</p>
+
+<p>Adjusted text input screen so that the input field is not hidden by the 
+character matrix.</p>
+
+<h3 id="bug-fixes-9">Bug fixes</h3>
+
+<p>Large number of files in a folder caused the unit to freeze.</p>
+
+<p>Copy/paste did not work on the MASTER page.</p>
+
+<p>Pattern change occurred one pattern length to late after receiving a Program 
+Change message from other Elektron device.</p>
+
+<p>Pressing <em>TRK</em> + <em>CLEAR</em> did not perform an undo operation unless you release 
+<em>TRK</em> in between.</p>
+
+<p><em>FUNC</em> + <em>SAMPLING</em> (Direct sampling) on Recorder screen did not clear the 
+waveform.</p>
+
+<p>Selecting project in Project Manager did not show any checkmark until moving 
+the cursor.</p>
+
+<p>"Enter search string" title in the SEARCH option on the Sound Managers SORTING 
+menu did not fit the screen window.</p>
+
+<p>The function to copy, clear and paste one or several patterns at the same time 
+without leaving the active pattern did not work.</p>
+
+<p>The MIDI tracks did not react to MIDI messages received on the track's set MIDI
+channel.</p>
+
+<h2 id="list-of-changes-from-os-105-to-106">List of changes from OS 1.05 to 1.06</h2>
+
+<h3 id="bug-fixes-10">Bug fixes</h3>
+
+<p>Changing the velocity parameter in the Retrig menu had no effect. (OS 1.05 
+Regression)</p>
+
+<p>Signal level with no overdrive was 6dB too low. (OS 1.05 Regression)</p>
+
+<p>In the sound manager, there would be a graphics error on the display when 
+copying more sounds than the destination had room for.</p>
+
+<h2 id="list-of-changes-from-os-104-to-105">List of changes from OS 1.04 to 1.05</h2>
+
+<h3 id="improvements-9">Improvements</h3>
+
+<p>Sound pool is added to the project. It is now possible to use sound locks on 
+sequencer steps.</p>
+
+<p>Previewing Sounds in the Sound browser temporarily disables the <em>FUNC</em> + 
+<em>UP/DOWN</em> page scrolling.</p>
+
+<p>Encoder click sensitivity is adjusted for better usability.</p>
+
+<p>The Track level graphics is now differentiated from other volume parameters 
+graphics.</p>
+
+<p>There is now an indication that tells if the user tries to load a sample which 
+exceeds available RAM in size.</p>
+
+<p>The active track indicator now has inverted graphics.</p>
+
+<p>The active page name is shown in the title bar when changing pages.</p>
+
+<p>Added a new Storage view to see the used/total amount of memory and the number 
+of projects, Sounds, and samples. The Storage view is available in the <em>System</em>
+menu.</p>
+
+<p>LFO speed parameter snaps to powers of two.</p>
+
+<p>Added sysex dump functionality.</p>
+
+<p>Added warning when trying to load more samples than there are slots available.</p>
+
+<h3 id="bug-fixes-11">Bug fixes</h3>
+
+<p>Allowed more headroom in the bit-crusher to improve audio quality.</p>
+
+<p>Main output had inverted polarity. The main output polarity has been reversed.</p>
+
+<p>The Sound browser would change the preview sound immediately when highlighting 
+it in the list. The Sound browser now changes the preview sound only when you 
+press <em>FUNC</em>+<em>YES</em>.</p>
+
+<p>LFO Depth parameter locks were sometimes lost when saving.</p>
+
+<p>Outgoing MIDI CC data from the FX parameter pages were under some circumstances
+sent to the wrong MIDI channel.</p>
+
+<p>BPM fraction would sometimes be incorrectly displayed.</p>
+
+<p>The filter trig parameter had no effect. The filter envelope was always 
+triggered by a note trig but never triggered by a lock trig. All patterns will 
+be automatically upgraded to compensate for the changes introduced by this fix.</p>
+
+<p>Lock trigs affected the release timing of the amplitude envelope.</p>
+
+<p>Page LEDs would not be fully lit when expanding pattern length in the <em>scale</em> 
+menu.</p>
+
+<p>MIDI sequencer would crash under certain circumstances.</p>
+
+<p>Selecting OS Upgrade while unit was playing audio would output a static high 
+pitched tone.</p>
+
+<p>After nudging the tempo, the tempo would change to the value set in Global 
+tempo mode, even if Pattern tempo was enabled.</p>
+
+<p>Consecutive clear/paste of parameter pages would not work as intended.</p>
+
+<p>Sample selector and modulation destination selector would flicker if they were 
+changed at the same time as another parameter.</p>
+
+<p>Unit would sometimes freeze during the startup sequence.</p>
+
+<p>MIDI CC was not transmitted from the Master page.</p>
+
+<p>Tune and Note params would skip two octaves instead of one, when dialed with 
+<em>FUNC</em> pressed.</p>
+
+<p>In some cases MIDI tracks would stop sending CC values.</p>
+
+<p>Holding down <em>FUNC</em>+<em>CLEAR</em> while in grid recording mode would rapidly toggle 
+between undo and redo.</p>
+
+<p>NRPN was not received.</p>
+
+<p>When pressing <em>FUNC</em>+<em>TEMPO</em> Mute mode would get activated until <em>FUNC</em> was 
+pressed again.</p>
+
+<p>Track sound name would not be updated after sound export.
+Sound list would not be closed after saving a sound.</p>
+
+<p>Note length when recording multiple Audio tracks (i.e when not in chromatic 
+mode) would not work properly.</p>
+
+<p>The unit would freeze when having external clock and selecting OS Upgrade.</p>
+
+<p>Lock trigs would always affect the note value.</p>
+
+<h2 id="list-of-changes-from-os-103-to-104">List of changes from OS 1.03 to 1.04</h2>
+
+<h3 id="changes">Changes</h3>
+
+<p>The grid record mode can now be toggled also while in Chromatic mode.</p>
+
+<p>The chromatic keyboard now has an extended octave range when a MIDI
+track is active.</p>
+
+<p>General performance optimizations. Time-consuming operations such as loading
+ / saving samples and projects are now faster.</p>
+
+<h3 id="bug-fixes-12">Bug fixes</h3>
+
+<p>The unit would sometimes crash when attempting to save the project via the 
+<em>FUNC</em> + <em>SAVE PPROJ</em> key combination.</p>
+
+<p>In some rare situations, the unit could crash while loading/deleting/moving
+samples.</p>
+
+<p>Pattern / Bank selection could not be accessed when in Chromatic mode.</p>
+
+<p>Playing the higest possible chromatic note (+24 semitones) on an audio track 
+via MIDI would cause a hanging note.</p>
+
+<p>If the MIDI Output CH setting was set to Trk Ch, the trig keys would
+incorrectly send notes to MIDI channel 1, regardless of the configured track
+channels.</p>
+
+<p>If a sample was loaded to more than one slot, only the first slot would have 
+the correct sample length.</p>
+
+<h2 id="list-of-changes-from-os-102-to-103">List of changes from OS 1.02 to 1.03</h2>
+
+<h3 id="changes-2">Changes</h3>
+
+<p>Updated factory presets. In total there are now 32 patterns and 64 sounds. To 
+install the factory presets you must perform a <em>Factory Reset</em>.
+<strong>WARNING:</strong> Factory reset overwrites Sound Bank A and Project 001.</p>
+
+<p>Metronome can be disabled/enabled using Func+PTN long press.</p>
+
+<p>Help text is shown when attempting to change a disabled MIDI parameter.</p>
+
+<p>Help text is shown when switching mute modes.</p>
+
+<p>The shortcut operations for saving/reloading patterns have been changed so they
+don't apply to the saved plus drive project. In order to save patterns to (or 
+reload ditto from) the plus drive project you must now use the pattern menu. 
+This means you can use the quick save/reload operations to work with the 
+pattern in a way that's not destructive for the saved project. The operations 
+will now also work for unsaved and write-protected projects.</p>
+
+<p>New default MIDI settings for new projects: USB output is enabled and parameter
+output is set to CC.</p>
+
+<p>Active mute mode (global vs pattern) is now remembered, so that both the mute 
+mode and the quick mute mode shows last visible mode instead of always 
+defaulting to global mutes.</p>
+
+<p>Write-protected samples are now marked with a padlock in the sample manager.</p>
+
+<p>On/off switch-type trig parameters retain their names on screen when parameter 
+locking. Were previously replaced by the text on or off.</p>
+
+<p>Improved bank selection mode.</p>
+
+<h3 id="bug-fixes-13">Bug fixes</h3>
+
+<p>Exception error when loading/deleting/moving samples.</p>
+
+<p>FX Settings not remembered after reboot.</p>
+
+<p>FX settings not applied correctly after pattern reload</p>
+
+<p>Track levels not applied after pattern reload.</p>
+
+<p>Having any MIDI track active causes internal tracks to ignore external MIDI 
+notes.</p>
+
+<p>Changing to a Pattern in a different Bank while playing displays incorrectly.</p>
+
+<p>Pattern selection would go away before PTN button was released.</p>
+
+<p>Project sub-menus not restored properly when toggling settings menu.</p>
+
+<p>Not possible to edit or record trigs via USB MIDI auto channel.</p>
+
+<p>Pattern paste and pattern reload wouldn't update tempo.</p>
+
+<p>Clearing the trig page would incorrectly reset the note length.</p>
+
+<p>Zooming on the recorder screen could cause big delays when saving the sample.</p>
+
+<p>MIDI transport input ignored its designated setting, and would be received or 
+not depending on whether clock input was enabled.</p>
+
+<p>Applying minimum trim in the recorder screen would make the unit freeze.</p>
+
+<p>Power cycling the unit would preserve the currently active global mutes, with 
+one exception: if track 16 was muted, all tracks were unmuted after a power 
+cycle.</p>
+
+<p>Some messages in the sample manager would not be displayed.</p>
+
+<p>It was not possible to clear MIDI note locks using trig key + play/clear.</p>
+
+<p>Pressing TRK would not close pattern change mode.</p>
+
+<p>Pattern selection mode would exit once a pattern had been selected, even though
+the PTN key was still being pressed.</p>
+
+<p>Mute mode could not be opened when in step recording mode.</p>
+
+<p>Pattern mute on MIDI Track would not engage until next pattern loop, or until 
+the second run of a pattern when changing pattern while the sequencer is 
+stopped.</p>
+
+<p>The unit would hang very easily if there were any trigs on the MIDI tracks and 
+if transport mode was changed quickly a few times in a row.</p>
+
+<h2 id="list-of-changes-from-os-101-to-102">List of changes from OS 1.01 to 1.02</h2>
+
+<h3 id="changes-3">Changes</h3>
+
+<p>Improved metronome menu.</p>
+
+<p>Improved quantization menu.</p>
+
+<p>Recorded sample trim is automatically reset after saving.</p>
+
+<p>Added possibility to reset recorded sample trim using the NO key.</p>
+
+<p>Reversed recorder zoom knob direction.</p>
+
+<p>Added graphical representation of reverb shelving filter.</p>
+
+<p>Added graphical representation of reverb and delay HP- and LP-filters.</p>
+
+<p>Improved simulation of encoder detention.</p>
+
+<h3 id="bug-fixes-14">Bug fixes</h3>
+
+<p>Last note in the external MIDI chromatic keyboard range was not playable.</p>
+
+<p>The mapped drum octave on external MIDI was too wide, triggering not 8 audio 
+tracks, but also incorrectly triggering the first 4 MIDI tracks.</p>
+
+<p>External MIDI could not be used to enter notes into the sequencer.</p>
+
+<p>Having any MIDI track active caused internal tracks to ignore external MIDI 
+notes.</p>
+
+<p>Unit would sometimes crash when synced to external MIDI clock.</p>
+
+<p>MIDI Notes were not cleared from trig when removing trig.</p>
+
+<p>MIDI Note2..4 were not included in copy/paste trigs, nor when rotating a track,
+nor with scale page copy/paste/clear.</p>
+
+<p>It was not possible to record chords into the MIDI sequencer via Chromatic Mode
+or external MIDI when live recording.</p>
+
+<h2 id="list-of-changes-from-os-100-to-101">List of changes from OS 1.00 to 1.01</h2>
+
+<h3 id="changes-4">Changes</h3>
+
+<p>Empty kit is initialized with eight default drum samples.</p>
+
+<p>Graphical amplitude envelope added to amp page.</p>
+
+<p>Graphical filter envelope and filter response plot added to filter page.</p>
+
+<p>Graphical MIDI note keyboard added to the MIDI trig page.</p>
+
+<p>The export sound operation no longer prompts for which track sound to use. It 
+just uses the currently active track. </p>
+
+<p>Func+yes can be used to preview sounds (using the active track) in the sound 
+browser.</p>
+
+<h3 id="bug-fixes-15">Bug fixes</h3>
+
+<p>Sample file association was not saved with sound, unless the slot parameter was
+updated after the sample was loaded.</p>
+
+<p>Sample loop position parameter had the wrong upper limit. Corrected to 120.</p>
+
+<p>Sound tag editor responded very slowly to input and did not use full screen.</p>
+
+<p>LFO trig flag was not enabled by default in new project.</p>
+
+<p>The clear kit option in the pattern menu would actually clear the sequence.</p>
+
+<p>No note-off was sent for infinite length MIDI notes when pressing stop.</p>
+
+<p>Entering MIDI notes outside of the valid range (0...127) using offsets would 
+result in undefined behavior.</p>
+
+<p>Showing all the parameter values of pages delay, reverb, and master by 
+pressing and holding func+page key did not work.</p>
+
+</body></html>
